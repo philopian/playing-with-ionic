@@ -19,6 +19,15 @@ angular.module('starter', ['ionic'])
   ];
 
 
+  //--form items----------
+  //toggle default
+  $scope.toggleSwitchHtml = true;
+  $scope.toggleSwitchCss = false;
+
+
+
+
+
 })
 
 

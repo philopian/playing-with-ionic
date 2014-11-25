@@ -53,39 +53,33 @@
 
 
       <div class="list">
-        <div class="list list-inset">
+        <div class="item item-divider">Form List Items</div>
+          <!-- username input -->
           <label class="item item-input">
-            <input type="text" placeholder="user name">
+            <input type="text" placeholder="user name" ng-model="usernameInput">
           </label>
-        </div>
 
-        <div class="list">
-           <label class="toggle">
-             <input type="checkbox">
-             <div class="track">
-               <div class="handle"></div>
-             </div>
-          </label>         
-        </div>
-
-<a class="item item-icon-left" >
-  <i class="icon ion-heart"></i>
-  Record album
-  <span class="item-note">
-<!--      <label class="toggle">
-             <input type="checkbox">
-             <div class="track">
-               <div class="handle"></div>
-             </div>
-          </label>     -->
-  </span>
-</a>
+          <!-- toggle switch -->
+          <div class="item item-toggle">
+             HTML5
+             <label class="toggle toggle-positive">
+               <input type="checkbox" ng-model="toggleSwitchHtml">
+               <div class="track">
+                 <div class="handle"></div>
+               </div>
+             </label>
+          </div>
+          <div class="item item-toggle">
+             CSS
+             <label class="toggle toggle-assertive">
+               <input type="checkbox" ng-model="toggleSwitchCss">
+               <div class="track">
+                 <div class="handle"></div>
+               </div>
+             </label>
+          </div>
 
 
-
-        <div style="padding-left:4px;padding-right:4px;">
-          <button class="button button-positive button-full" >button-positive</button>
-        </div>
         
       </div>
 
