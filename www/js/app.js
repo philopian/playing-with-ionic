@@ -20,6 +20,8 @@ angular.module('starter', ['ionic'])
 
 
   //--form items----------
+  $scope.usernameInput = "";
+
   //toggle default
   $scope.toggleSwitchHtml = true;
   $scope.toggleSwitchCss = false;
@@ -28,6 +30,42 @@ angular.module('starter', ['ionic'])
   $scope.checkboxObjC = true;
   $scope.checkboxSwift = false;
 
+  //Submit button
+  $scope.sendFormData = function(){
+
+    var userName = "You have";
+    if ($scope.usernameInput != ""){
+      userName = $scope.usernameInput +" has";
+    }
+    var checkedItemsFromUser = [];
+    if($scope.toggleSwitchHtml === true){
+      checkedItemsFromUser.push("HTML");
+    } 
+    if($scope.toggleSwitchCss === true){
+      checkedItemsFromUser.push("CSS");
+    } 
+    if($scope.checkboxObjC === true){
+      checkedItemsFromUser.push("ObjectiveC");
+    } 
+    if($scope.checkboxSwift === true){
+      checkedItemsFromUser.push("Swift");
+    } 
+    var itemsSelected = "";
+    for (var i in checkedItemsFromUser){
+
+      if(checkedItemsFromUser.length >=1 && i == 0){
+        itemsSelected += checkedItemsFromUser[i];
+
+      } else if(checkedItemsFromUser.length >2 && i == 0){
+        console.log("mmmmmmm");
+
+      } else {
+        itemsSelected += ", "+checkedItemsFromUser[i];
+      }
+    }
+    console.log(itemsSelected);
+    alert(userName +" selected: "+itemsSelected)
+  }
 
 
 })
