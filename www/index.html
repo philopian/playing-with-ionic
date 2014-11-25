@@ -31,11 +31,32 @@
       <ion-content ng-controller="MyCtrl">
 
 
-        <!-- list items from a scope array -->
+        <!-- list items - from a scope array -->
         <div class="list">
           <div class="item item-divider">List items from controller</div>
           <a class="item" href="#" ng-repeat="item in listItems">{{item.title}}</a>
         </div>
+
+
+        <!-- inset List - from a scope array -->
+        <div class="list">
+          <div class="item item-divider">Inset List items from controller</div>
+          <div class="list list-inset">
+            
+            <a class="item" href="#" ng-repeat="item in listItems">{{item.title}}</a>
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
