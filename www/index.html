@@ -41,17 +41,15 @@
 
 
         <!-- inset List - from a scope array -->
-        <div class="list">
-          <div class="item item-divider">Inset List items from controller</div>
-          <div class="list list-inset">
-            <a class="item" href="#" ng-repeat="item in listItems">{{item.title}}</a>
-          </div>
-        </div>
+        <!-- <div class="list"> -->
+          <!-- <div class="item item-divider">Inset List items from controller</div> -->
+          <!-- <div class="list list-inset"> -->
+            <!-- <a class="item" href="#" ng-repeat="item in listItems">{{item.title}}</a> -->
+          <!-- </div> -->
+        <!-- </div> -->
 
 
-        <!-- form elements -->
-
-
+      <!-- form elements -->
       <div class="list">
         <div class="item item-divider">Form List Items</div>
           <!-- username input -->
@@ -79,12 +77,20 @@
              </label>
           </div>
 
-
-        
+          <!-- checkboxes -->
+          <div class="item item-checkbox">
+               <label class="checkbox">
+                 <input type="checkbox" ng-model="checkboxObjC">
+               </label>
+               ObjectiveC
+          </div>
+          <div class="item item-checkbox">
+               <label class="checkbox">
+                 <input type="checkbox" ng-model="checkboxSwift">
+               </label>
+               Swift
+          </div>  
       </div>
-
-
-
 
 
 

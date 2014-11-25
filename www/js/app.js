@@ -24,7 +24,9 @@ angular.module('starter', ['ionic'])
   $scope.toggleSwitchHtml = true;
   $scope.toggleSwitchCss = false;
 
-
+  //CHeckboxes
+  $scope.checkboxObjC = true;
+  $scope.checkboxSwift = false;
 
 
 
