@@ -28,7 +28,16 @@
         <h1 class="title">Messing Around With Ionic</h1>
       </ion-header-bar>
       <!-- START - VIEW STUFF HERE -->
-      <ion-content>
+      <ion-content ng-controller="MyCtrl">
+
+
+        <!-- list items from a scope array -->
+        <div class="list">
+          <div class="item item-divider">List items from controller</div>
+          <a class="item" href="#" ng-repeat="item in listItems">{{item.title}}</a>
+        </div>
+
+
 
 
 

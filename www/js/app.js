@@ -5,6 +5,25 @@
 // the 2nd parameter is an array of 'requires'
 angular.module('starter', ['ionic'])
 
+
+
+.controller('MyCtrl', function($scope){
+
+
+
+  // list items as rows in the view
+  $scope.listItems = [
+    {"title": "here is something"},
+    {"title": "a second item"},
+    {"title": "... and a third"}
+  ];
+
+
+})
+
+
+
+
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
