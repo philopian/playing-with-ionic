@@ -13,9 +13,9 @@ angular.module('starter', ['ionic'])
 
   // list items as rows in the view
   $scope.listItems = [
-    {"title": "here is something"},
-    {"title": "a second item"},
-    {"title": "... and a third"}
+    {"title": "here is something", "icon":"ion-heart"},
+    {"title": "a second item", "icon":"ion-location"},
+    {"title": "... and a third", "icon":"ion-bug"}
   ];
 
 

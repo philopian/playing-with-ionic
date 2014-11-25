@@ -34,7 +34,9 @@
         <!-- list items - from a scope array -->
         <div class="list">
           <div class="item item-divider">List items from controller</div>
-          <a class="item" href="#" ng-repeat="item in listItems">{{item.title}}</a>
+          <a class="item item-icon-left" href="#" ng-repeat="item in listItems">
+             <i class="icon" ng-class="item.icon"></i>{{item.title}}
+           </a>
         </div>
 
 
@@ -42,15 +44,50 @@
         <div class="list">
           <div class="item item-divider">Inset List items from controller</div>
           <div class="list list-inset">
-            
             <a class="item" href="#" ng-repeat="item in listItems">{{item.title}}</a>
           </div>
         </div>
 
 
+        <!-- form elements -->
+
+
+      <div class="list">
+        <div class="list list-inset">
+          <label class="item item-input">
+            <input type="text" placeholder="user name">
+          </label>
+        </div>
+
+        <div class="list">
+           <label class="toggle">
+             <input type="checkbox">
+             <div class="track">
+               <div class="handle"></div>
+             </div>
+          </label>         
+        </div>
+
+<a class="item item-icon-left" >
+  <i class="icon ion-heart"></i>
+  Record album
+  <span class="item-note">
+<!--      <label class="toggle">
+             <input type="checkbox">
+             <div class="track">
+               <div class="handle"></div>
+             </div>
+          </label>     -->
+  </span>
+</a>
 
 
 
+        <div style="padding-left:4px;padding-right:4px;">
+          <button class="button button-positive button-full" >button-positive</button>
+        </div>
+        
+      </div>
 
 
 
