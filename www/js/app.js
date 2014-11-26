@@ -4,10 +4,26 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 angular.module('starter', ['ionic'])
+.factory('Camera', ['$q', function($q) {
+
+  return {
+    getPicture: function(options) {
+      var q = $q.defer();
+
+      navigator.camera.getPicture(function(result) {
+        // Do any magic you need
+        q.resolve(result);
+      }, function(err) {
+        q.reject(err);
+      }, options);
+
+      return q.promise;
+    }
+  }
+}])//Service - Camera 
 
 
-
-.controller('MyCtrl', function($scope){
+.controller('MyCtrl', function($scope, Camera){
 
 
 
@@ -32,7 +48,6 @@ angular.module('starter', ['ionic'])
 
   //Submit button
   $scope.sendFormData = function(){
-
     var userName = "You have";
     if ($scope.usernameInput != ""){
       userName = $scope.usernameInput +" has";
@@ -52,26 +67,37 @@ angular.module('starter', ['ionic'])
     } 
     var itemsSelected = "";
     for (var i in checkedItemsFromUser){
-
       if(checkedItemsFromUser.length >=1 && i == 0){
         itemsSelected += checkedItemsFromUser[i];
-
-      } else if(checkedItemsFromUser.length >2 && i == 0){
-        console.log("mmmmmmm");
-
       } else {
         itemsSelected += ", "+checkedItemsFromUser[i];
       }
     }
-    console.log(itemsSelected);
     alert(userName +" selected: "+itemsSelected)
   }
 
 
-})
+  // Camera - Get Photo
+  $scope.getPhoto = function() {
+    console.log('Getting camera');
+    Camera.getPicture()
+      .then(function(imageURI) {
+        console.log(imageURI);
+        $scope.lastPhoto = imageURI;
+        alert(lastPhoto);
+      }, function(err) {
+        console.err(err);
+      }, {
+        quality: 75,
+        targetWidth: 320,
+        targetHeight: 320,
+        saveToPhotoAlbum: false
+      });
+  }//getPhoto
 
 
 
+})//Controller-MyCtrl
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {

@@ -32,7 +32,7 @@
 
 
         <!-- list items - from a scope array -->
-        <div class="list">
+        <div class="list" style="margin-bottom: 0px;">
           <div class="item item-divider">List items from controller</div>
           <a class="item item-icon-left" href="#" ng-repeat="item in listItems">
              <i class="icon" ng-class="item.icon"></i>{{item.title}}
@@ -50,7 +50,7 @@
 
 
       <!-- form elements -->
-      <div class="list">
+      <div class="list" style="margin-bottom: 0px;">
         <div class="item item-divider">Form List Items</div>
           <!-- username input -->
           <label class="item item-input">
@@ -90,18 +90,32 @@
                </label>
                Swift
           </div>  
+
+          <!-- submit button -->
+          <div style="padding-left:4px;padding-right:4px;">
+            <button class="button button-positive button-full" ng-click="sendFormData()">
+              Submit Results
+            </button>
+          </div>
       </div>
 
+      <!-- Camera Functionality -->
+      <div class="list" style="margin-bottom: 0px;">
+            <div class="item item-divider">Camera Stuff</div>
+             <div class="item item-button-right">
+                Take a Photo
+                <button class="button button-positive" ng-click="getPhoto()">
+                  <i class="icon ion-ios7-camera"></i>
+                </button>
+              </div>
+            
+      </div>
+      <div class="list list-inset" style="margin: 10px;">
+        <img ng-src="{{lastPhoto}}" style="max-width: 100%; height:300px;width:100%;">
+  
+      </div>
 
-        <div style="padding-left:4px;padding-right:4px;">
-          <button class="button button-positive button-full" ng-click="sendFormData()">
-            Submit Results
-          </button>
-        </div>
-
-
-
-
+          {{lastPhoto}}
 
 
 
